@@ -1,0 +1,200 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+li {
+	list-style-type: none;
+}
+
+dd{
+	margin: 0;
+}
+
+*:focus {
+	outline: none;
+}
+
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+html,body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-width: 320px;
+	min-height: 320px;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+
+#main-container {
+	display: flex;
+	flex-direction: row;
+}
+
+#sidenav {
+	display: flex;
+	flex-direction: column;
+	background-color: #505050;
+	color: white;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #F0F0F0;
+}
+
+#groups {		
+}
+
+#content-body {
+	display: flex;
+	flex-direction: row;			
+}
+
+#content-body .times {
+	display: flex;
+	flex-direction: column;
+}
+
+#content-body div#regulator {
+	top: 0;
+	padding-bottom: 112px;
+	margin-bottom: 0px;
+	background-color: white;
+}
+
+#content-body .times div{
+	margin: 0px 10px 41px 10px;
+	font-size: 12px;
+	line-height: 19px;
+	height: 19px;
+}
+
+.timetable-grid {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	position: relative;
+}
+
+.timetable-grid table{
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.timetable-grid tr{
+	height: 60px;
+}
+
+.timetable-grid td{
+	border: 1px solid grey;
+}
+
+.timetable-grid .head {
+	background-color: white;
+	z-index: 1
+}
+
+.block-container {
+	position: absolute;
+	table-layout: fixed;
+	top: 121px;
+	left: 0;
+	height: 1440px;
+	border-spacing: 0;
+}
+
+.block-container td {
+	position: relative;
+	width: auto;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+
+.block-creation-area {
+	height: 100%;
+	z-index: 0;
+}
+
+.block {
+	cursor: pointer;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 90%;
+	height: 20px;
+	color: white;
+	font-size: 13px;
+	min-height: 15px;
+	z-index: 1;
+}
+
+.block .scale-area {
+	cursor: s-resize;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+}
+
+.block-form {
+	visibility: hidden;
+	position: absolute;
+	top: 400px;
+	left: 700px;
+	background-color: grey;
+	height: auto;
+	z-index: 2;
+}
+
+.indicator {
+	background-color: red;
+	position: absolute;
+	z-index: 999;
+}
+
+#notf-container {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	min-width: 100px;
+	max-width: 100%;
+	z-index: 2;
+}
+
+.notf {
+	cursor: pointer;
+	margin: 5px;
+	padding: 10px;
+	background-color: red;
+    -webkit-animation: fade 0.3s;
+    animation: fade 0.3s;
+    opacity: 1;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
